@@ -1,0 +1,19 @@
+{% extends 'products.html' %}
+
+{% block content %}
+
+<ul>
+
+{% with pysakit=data.response.node %}
+
+	{% for pysakki in pysakit %}
+
+		<li>{{pysakki.name}}</li>
+
+	{% endfor %}
+
+{% endwith %}
+
+</ul>
+
+{% endblock %}
